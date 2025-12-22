@@ -1,0 +1,149 @@
+.equipment-page {
+  padding-bottom: 4rem;
+}
+
+.equipment-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.equipment-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.equipment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.equipment-image {
+  position: relative;
+  height: 200px;
+  background: var(--gray-100);
+}
+
+.equipment-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stock-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+}
+
+.stock-badge.low {
+  background: var(--warning);
+  color: var(--white);
+}
+
+.stock-badge.out {
+  background: var(--danger);
+  color: var(--white);
+}
+
+.equipment-info {
+  padding: 1.25rem;
+}
+
+.equipment-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.equipment-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 0.25rem;
+}
+
+.equipment-brand {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  margin-bottom: 0.75rem;
+}
+
+.equipment-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.equipment-sport,
+.equipment-condition {
+  font-size: 0.8125rem;
+  color: var(--gray-600);
+  text-transform: capitalize;
+}
+
+.equipment-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-100);
+}
+
+.equipment-price {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.equipment-price svg {
+  font-size: 1rem;
+  color: var(--success);
+}
+
+@media (max-width: 1024px) {
+  .equipment-content {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 1rem;
+    align-items: end;
+  }
+
+  .filters-header {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .filters-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+}
